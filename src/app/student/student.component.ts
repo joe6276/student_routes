@@ -29,5 +29,15 @@ student?:Student
   
     
   }
+  deleteStudents(){
+    this.route.params.subscribe(
+    (params:Params)=>{
+      const id =+ params['id']
+      this.studentService.deleteStudent(id)
+    }
+    )
+    this.router.navigate(['students'])
+    
+  }
 
 }

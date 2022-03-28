@@ -1,7 +1,14 @@
-<div *ngIf="student">
+<div *ngIf="!student">
+    <p>Please Select a student !!!</p>
+</div>
+<div>
+    <div *ngIf="student">
 
-<h1>{{student.name}}</h1>
-<p>{{student.email}}</p>
-<p>{{student.phone}}</p>
-<button class="btn btn-primary" (click)="editStudents()"> Edit {{student.name}}</button>
+        <h1>{{student.name}}</h1>
+        <p>{{student.email}}</p>
+        <p>{{student.phone}}</p>
+        <button class="btn btn-primary" (click)="editStudents()"> Edit {{student.name}}</button>
+        <br>
+        <button class="btn btn-danger" (click)="deleteStudents()"> Delete {{student.name}}</button>
+        </div>
 </div>

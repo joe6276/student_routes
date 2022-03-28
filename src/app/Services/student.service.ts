@@ -56,5 +56,17 @@ export class StudentService{
             }
            
             }
+
+            addStudent(name:string, email:string ,phone:string){
+                this.students.push({
+                    id:this.students.length+1,
+                    name:name,
+                    email:email,
+                    phone:phone
+                })
+            }
+            deleteStudent(id:number){
+               this.students.splice(id-1, 1) 
+            }
              
 }

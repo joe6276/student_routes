@@ -1,1 +1,30 @@
-<p>add-student works!</p>
+
+ <br>
+ <br>
+<div class="row">
+    <h1>Add a New Student</h1>
+    <div class="col-xs-8">
+        <label for="name">Name</label>
+        <input class="form-control"   #name type="text"/> 
+        <br>
+        <label for="name"> Email</label>
+        <input class="form-control"  #email type="text"/> 
+        <br>
+        <label for="name"> Phone</label>
+        <input class="form-control" #phone type="text"/> 
+        <br>
+        <div class="row">
+         
+            <div class="col-xs-4">
+                <button (click)="addStudent(
+                    name.value,
+                    email.value,
+                    phone.value
+                )"class="btn btn-primary">Register </button>
+            </div>
+
+           
+           </div>
+       
+    </div>
+</div>

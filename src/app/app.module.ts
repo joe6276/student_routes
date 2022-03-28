@@ -12,6 +12,7 @@ import { StudentService } from './Services/student.service';
 import { StudentResolver } from './Resolvers/studentResolver';
 import { EditStudentsComponent } from './edit-students/edit-students.component';
 import { StudentComponent } from './student/student.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StudentComponent } from './student/student.component';
     StudentsComponent,
     HomeComponent,
     EditStudentsComponent,
-    StudentComponent
+    StudentComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
