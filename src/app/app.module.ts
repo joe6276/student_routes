@@ -10,13 +10,17 @@ import { AuthGuard } from './Services/auth-guard-service';
 import { HomeComponent } from './home/home.component';
 import { StudentService } from './Services/student.service';
 import { StudentResolver } from './Resolvers/studentResolver';
+import { EditStudentsComponent } from './edit-students/edit-students.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
     StudentsComponent,
-    HomeComponent
+    HomeComponent,
+    EditStudentsComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
