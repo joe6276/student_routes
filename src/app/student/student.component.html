@@ -1,0 +1,7 @@
+<div *ngIf="student">
+
+<h1>{{student.name}}</h1>
+<p>{{student.email}}</p>
+<p>{{student.phone}}</p>
+<button class="btn btn-primary" (click)="editStudents()"> Edit {{student.name}}</button>
+</div>

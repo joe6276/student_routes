@@ -1,4 +1,3 @@
-
 import { Student } from "../Interfaces/student";
 
 
@@ -22,7 +21,7 @@ export class StudentService{
         }
         ,
         {
-            id:1,
+            id:3,
             name:'Felix',
             email:'felix@juma.com',
             phone:'+254712584549'
@@ -34,4 +33,28 @@ export class StudentService{
         getStudents(){
             return this.students
         }
+
+        getStudent(id:number){
+            const student = this.students.find(
+                (s) => {
+                  return s.id === id;
+                }
+              );
+              return student
+        }
+
+        updateStudent(id:number, newname:string, newemail:string ,newPhone:string){
+            const student = this.students.find(
+                (s) => {
+                  return s.id === id;
+                }
+              );
+              if(student){
+                student.email=newemail
+                student.name=newname
+                student.phone=newPhone
+            }
+           
+            }
+             
 }
