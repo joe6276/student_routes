@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from '../Interfaces/student';
 
 @Component({
@@ -9,7 +9,9 @@ import { Student } from '../Interfaces/student';
 })
 export class StudentsComponent implements OnInit {
 students:Student[]=[]
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,
+    
+    private router:Router) { }
 
   ngOnInit(): void {
 
@@ -20,6 +22,10 @@ students:Student[]=[]
       }
     )
     console.log(this.students)
+  }
+
+  addStudent(){
+    this.router.navigate(['register'])
   }
 
 }
